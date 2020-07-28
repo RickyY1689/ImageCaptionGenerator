@@ -5,8 +5,8 @@ from io import BytesIO
 
 class ImgAnalysis: 
     def __init__(self):
-        self.key = "0d137a82e2b1446c968a1b65c5ee6f8b"
-        self.endpoint = "https://centralus.api.cognitive.microsoft.com/"
+        self.key = <ADD KEY>
+        self.endpoint = <ADD ENDPOINT>
         self.analyzeUrl = self.endpoint + "vision/v2.0/analyze"
     
     def remoteImg(self, imgUrl):
