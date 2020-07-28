@@ -13,5 +13,5 @@ Using notepad, open ImgAnalysis.py and input your Microsoft Azure computer visio
 
 ## Reasources 
 Documentation on the Microsoft Azure Computer Vision API can be found [here](https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/). <br/>
-Creating resource groups and accounts can be done on [Azure's CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-windows?view=azure-cli-latest&tabs=azure-cli#run-the-azure-cli) <br/>
-and the commands accepted within the CLI are available [here](https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest#az-group-create)
+Creating resource groups and accounts can be done on [Azure's CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-windows?view=azure-cli-latest&tabs=azure-cli#run-the-azure-cli) and the commands accepted <br/>
+within the CLI are available [here](https://docs.microsoft.com/en-us/cli/azure/group?view=azure-cli-latest#az-group-create).
