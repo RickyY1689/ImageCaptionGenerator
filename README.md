@@ -6,7 +6,7 @@ GUI was designed using Tkinter and caption is generated using computer vision pr
 computer vision API.
 
 ## Usage 
-Note that this program requires a Microsoft Azure account <br/>
+**Note** that this program requires a Microsoft Azure account. <br/>
 Using your Microsoft Azure account, create a cognitive service resource group and create an account your program will use to access the API <br/>
 To run this program, install both python files as well as the jpg image into one folder.<br/>
 Using notepad, open ImgAnalysis.py and input your Microsoft Azure computer vision account key and endpoint. <br/>
