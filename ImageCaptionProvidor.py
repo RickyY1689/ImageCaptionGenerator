@@ -30,7 +30,7 @@ def clearFrame():
     for widget in captionFrame.winfo_children():
         widget.destroy()
     
-def sendInput(imgUrl):
+def getCaptionWithURL(imgUrl):
     clearFrame()
     caption = imgAnalyzer.remoteImg(imgUrl)
 
@@ -43,8 +43,9 @@ def sendInput(imgUrl):
 
     imgCaption=tk.Label(captionFrame, text=caption, fg="black")
     imgCaption.pack(side = "bottom", expand = YES)
+    entry.delete(0, 'end')
 
-def getImgPath():
+def getCaptionWithPath():
     clearFrame()
     
     filename = filedialog.askopenfilename(initialdir="/", title="Select File", 
@@ -88,7 +89,7 @@ entry = tk.Entry(upperFrame, bg='white', font=("Calibri 12"))
 entry.place(relx=0.01, rely=0.5, relwidth=0.65, relheight=0.7, anchor='w')
 
 #Labda functions are known as inline functions which will rerun everytime it is called allowing us to get the updated input 
-button = tk.Button(upperFrame, text="Test button", bg='gray', command=lambda: sendInput(entry.get()))
+button = tk.Button(upperFrame, text="Get Caption From URL", bg='gray', command=lambda: getCaptionWithURL(entry.get()))
 button.place(relx=0.98, rely=0.5, relwidth=0.3, relheight=0.7, anchor='e') 
 
 midFrame = tk.Frame(root, bg='#80c1ff')
@@ -97,14 +98,12 @@ midFrame.place(relx=0.5, rely=0.2, relwidth=0.75, relheight=0.1, anchor='n')
 pathlabel = tk.Label(midFrame, text="", bg='white')
 pathlabel.place(relx=0.01, rely=0.5, relwidth=0.65, relheight=0.7, anchor='w') 
 
-button = tk.Button(midFrame, text="Test button", bg='gray', command=getImgPath)
+button = tk.Button(midFrame, text="Get Caption From Path", bg='gray', command=getCaptionWithPath)
 button.place(relx=0.98, rely=0.5, relwidth=0.3, relheight=0.7, anchor='e') 
 
 imgFrame = tk.Frame(root, bg="#80c1ff", bd=10)
 imgFrame.place(relx=0.5, rely=0.35, relwidth=0.75, relheight=0.5, anchor='n')
 captionFrame = tk.Frame(root, bg="#80c1ff", bd=10)
 captionFrame.place(relx=0.5, rely=0.85, relwidth=0.75, relheight=0.1, anchor='n')
-# imgFrame = tk.Frame(lowerFrame, bg='white')
-# imgFrame.place(relx=0.5, rely=0.35, relwidth=0.75, relheight=0.6, anchor='n')
 
 root.mainloop()
