@@ -1,2 +1,5 @@
 # cache reasources 
 /__pycache__
+
+# Environment Reasources (keys)
+*.env

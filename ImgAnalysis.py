@@ -1,12 +1,15 @@
 import requests
 import json
+import os
+from dotenv import load_dotenv
 from PIL import Image
 from io import BytesIO
 
 class ImgAnalysis: 
     def __init__(self):
-        self.key = <ADD KEY>
-        self.endpoint = <ADD ENDPOINT>
+        load_dotenv()
+        self.key = os.getenv("SECRET_KEY")
+        self.endpoint = os.getenv("ENDPOINT")
         self.analyzeUrl = self.endpoint + "vision/v2.0/analyze"
     
     def remoteImg(self, imgUrl):
